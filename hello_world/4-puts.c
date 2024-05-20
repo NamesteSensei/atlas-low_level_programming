@@ -1,15 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - Prints a string using puts
- *
- * Return: 0 on success
+  Programming is like building a multilingual puzzle.
  */
-int main(void)
+	int main(void)
 {
-    /* Print the message using puts */
-    puts("Programming is like building a multilingual puzzle);
-
+    puts("Programming is like building a multilingual puzzle\n");
     return (0);
 }
 
