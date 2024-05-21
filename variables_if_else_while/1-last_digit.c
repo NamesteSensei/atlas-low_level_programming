@@ -3,25 +3,23 @@
 #include <time.h>
 
 int main() {
-    // This part makes sure we get a different number each time we play the game.
-    srand(time(0));
+    // Assuming the random number generation part is here
+    // int n = rand(); // Example of generating a random number
 
-    // The magic box gives us a number.
+    // Generate a random number
+    srand(time(0)); // Seed the random number generator
     int n = rand();
 
-    // Let's check the last digit of our number.
-    int lastDigit = n % 10;
+    // Extract the last digit of n
+    int lastDigit = abs(n) % 10;
 
-    printf("Last digit of ");
-    printf("%d", n);
-    printf(" is ");
-
+    // Determine the condition based on the last digit
     if (lastDigit > 5) {
-        printf("and is greater than 5\n");
+        printf("Last digit of %d is %d and is greater than 5\n", n, lastDigit);
     } else if (lastDigit == 0) {
-        printf("and is 0\n");
+        printf("Last digit of %d is %d and is 0\n", n, lastDigit);
     } else {
-        printf("and is less than 6 and not 0\n");
+        printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastDigit);
     }
 
     return 0;
