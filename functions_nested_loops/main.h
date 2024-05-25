@@ -17,12 +17,4 @@ void print_to_98(int n);
 void jack_bauer(void);
 int _putchar(char c);
 
-/* Main Function*/
-
-int main(void)
-{
-	/* Your code goes here */
-	return (0);
-}
-
 #endif /* MAIN_H */
