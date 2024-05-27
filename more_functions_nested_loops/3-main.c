@@ -1,5 +1,4 @@
 #include "main.h"
-<<<<<<< HEAD
 #include <stdio.h>
 
 /**
@@ -7,11 +6,11 @@
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
     int a = 98, b = 1024;
     printf("Result of multiplication of %d and %d is %d\n", a, b, mul(a, b));
-=======
 
 /**
  * main - Entry point
@@ -21,7 +20,6 @@ int main(void)
 int main(void)
 {
     print_numbers();
->>>>>>> 7503dbdd3657dbcccc52e6a471678cfd66dfd77d
     return (0);
 }
 
