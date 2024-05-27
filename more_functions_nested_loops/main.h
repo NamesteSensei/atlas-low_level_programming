@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-<<<<<<< HEAD
+
 /* Function to print a character */
 int _putchar(char c);
 
@@ -31,7 +31,6 @@ void print_diagonal(int n);
 
 #endif /* MAIN_H */
 
-=======
 int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
@@ -44,4 +43,3 @@ void print_square(int size);
 void print_triangle(int size);
 
 #endif /* MAIN_H */
->>>>>>> 7503dbdd3657dbcccc52e6a471678cfd66dfd77d
