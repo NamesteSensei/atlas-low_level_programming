@@ -1,7 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-
 /* Function to print a character */
 int _putchar(char c);
 
@@ -29,17 +28,11 @@ void print_line(int n);
 /* Function to draw a diagonal line on the terminal */
 void print_diagonal(int n);
 
-#endif /* MAIN_H */
-
-int _isupper(int c);
-int _isdigit(int c);
-int mul(int a, int b);
-void print_numbers(void);
-void print_most_numbers(void);
-void more_numbers(void);
-void print_line(int n);
-void print_diagonal(int n);
+/* Function to draw a square on the terminal */
 void print_square(int size);
+
+/* Function to draw a triangle on the terminal */
 void print_triangle(int size);
 
 #endif /* MAIN_H */
+
