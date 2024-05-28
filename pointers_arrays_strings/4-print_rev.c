@@ -7,21 +7,21 @@
  */
 void print_rev(char *s)
 {
-    int length = 0;
-    int i;
+	int length = 0;
+	int i;
 
-    /* get the length of the string */
-    while (s[length] != '\0')
-    {
-        length++;
-    }
+	/* get the length of the string */
+	while (s[length] != '\0')
+	{
+		length++;
+	}
 
-    /* print the string in reverse */
-    for (i = length - 1; i >= 0; i--)
-    {
-        _putchar(s[i]);
-    }
+	/* print the string in reverse */
+	for (i = length - 1; i >= 0; i--)
+	{
+		_putchar(s[i]);
+	}
 
-    _putchar('\n');
+	_putchar('\n');
 }
 
