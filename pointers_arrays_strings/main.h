@@ -34,5 +34,8 @@ char *_strcpy(char *dest, char *src);
 /* Function that convert a string to an integer */
 int _atoi(char *s);
 
+/* Function that writes the character c to stdout */
+int _putchar(char c);
+
 #endif /* MAIN_H */
 
