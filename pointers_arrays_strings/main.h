@@ -1,6 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/* Function that writes the character c to stdout */
+int _putchar(char c);
+
 /* Function that locates a character in a string */
 char *_strchr(char *s, char c);
 
