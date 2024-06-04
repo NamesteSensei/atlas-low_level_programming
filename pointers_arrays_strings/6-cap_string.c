@@ -11,6 +11,7 @@ char *cap_string(char *s)
 {
     int i = 0;
     int j;
+    char separators[] = " \t\n,;.!?\"(){}";
 
     /* Capitalize the first character if it is a letter */
     if (s[i] >= 'a' && s[i] <= 'z')
