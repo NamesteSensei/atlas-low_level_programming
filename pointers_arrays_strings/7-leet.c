@@ -1,41 +1,28 @@
 #include "main.h"
-#include <ctype.h>
 
 /**
- * leet - Encodes a string into 1337
- * @s: The string to encode
- *
- * Return: A pointer to the encoded string
+ * leet - encodes a string into 1337
+ * @s: string to encode
+ * Return: encoded string
  */
 char *leet(char *s)
 {
-	int i = 0;
-	int j;
-	char separators[] = " \t\n,;.!?\"(){}";
+    int i, j;
+    char letters[] = "aAeEoOtTlL";
+    char numbers[] = "43071";
 
-	/* Capitalize the first character if it is a letter */
-	if (s[i] >= 'a' && s[i] <= 'z')
-	{
-		s[i] = s[i] - 'a' + 'A';
-	}
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        for (j = 0; letters[j] != '\0'; j++)
+        {
+            if (s[i] == letters[j])
+            {
+                s[i] = numbers[j / 2];
+                break;
+            }
+        }
+    }
 
-	/* Go through the string, looking for word separators */
-	for (i = 1; s[i] != '\0'; i++)
-	{
-		/* Check if the character is a separator */
-		for (j = 0; separators[j] != '\0'; j++)
-		{
-			if (s[i - 1] == separators[j])
-			{
-				/* If the next character is a lowercase letter, capitalize it */
-				if (s[i] >= 'a' && s[i] <= 'z')
-				{
-					s[i] = s[i] - 'a' + 'A';
-				}
-			}
-		}
-	}
-
-	return (s);
+    return (s);
 }
 
