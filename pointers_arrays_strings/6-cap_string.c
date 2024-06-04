@@ -1,43 +1,40 @@
 #include "main.h"
+#include <ctype.h>
 
 /**
- * cap_string - capitalizes all words of a string
- * @s: the string to capitalize
+ * cap_string - Capitalizes all words of a string
+ * @s: The string to change
  *
- * Return: a pointer to the capitalized string
+ * Return: A pointer to the changed string
  */
 char *cap_string(char *s)
 {
     int i = 0;
-    int new_word = 1;
-    char separators[] = " \t\n,;.!?\"(){}";
+    int j;
 
-    while (s[i] != '\0')
+    /* Capitalize the first character if it is a letter */
+    if (s[i] >= 'a' && s[i] <= 'z')
     {
-        // Check if the character is a separator
-        for (int j = 0; separators[j] != '\0'; j++)
-        {
-            if (s[i] == separators[j])
-            {
-                new_word = 1;
-                break;
-            }
-        }
-
-        // If it's a new word and the character is a lowercase letter, capitalize it
-        if (new_word && s[i] >= 'a' && s[i] <= 'z')
-        {
-            s[i] = s[i] - 'a' + 'A';
-            new_word = 0;
-        }
-        else if (s[i] >= 'A' && s[i] <= 'Z')
-        {
-            new_word = 0;
-        }
-
-        i++;
+        s[i] = s[i] - 'a' + 'A';
     }
 
-    return s;
+    /* Go through the string, looking for word separators */
+    for (i = 1; s[i] != '\0'; i++)
+    {
+        /* Check if the character is a separator */
+        for (j = 0; separators[j] != '\0'; j++)
+        {
+            if (s[i - 1] == separators[j])
+            {
+                /* If the next character is a lowercase letter, capitalize it */
+                if (s[i] >= 'a' && s[i] <= 'z')
+                {
+                    s[i] = s[i] - 'a' + 'A';
+                }
+            }
+        }
+    }
+
+    return (s);
 }
 
