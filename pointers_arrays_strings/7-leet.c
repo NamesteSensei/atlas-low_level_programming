@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctype.h>
 
 /**
  * leet - Encodes a string into 1337
@@ -8,21 +9,33 @@
  */
 char *leet(char *s)
 {
-    int i, j;
-    char letters[] = "aAeEoOtTlL";
-    char numbers[] = "4433007711";
+	int i = 0;
+	int j;
+	char separators[] = " \t\n,;.!?\"(){}";
 
-    for (i = 0; s[i] != '\0'; i++)
-    {
-        for (j = 0; letters[j] != '\0'; j++)
-        {
-            if (s[i] == letters[j])
-            {
-                s[i] = numbers[j];
-            }
-        }
-    }
+	/* Capitalize the first character if it is a letter */
+	if (s[i] >= 'a' && s[i] <= 'z')
+	{
+		s[i] = s[i] - 'a' + 'A';
+	}
 
-    return (s);
+	/* Go through the string, looking for word separators */
+	for (i = 1; s[i] != '\0'; i++)
+	{
+		/* Check if the character is a separator */
+		for (j = 0; separators[j] != '\0'; j++)
+		{
+			if (s[i - 1] == separators[j])
+			{
+				/* If the next character is a lowercase letter, capitalize it */
+				if (s[i] >= 'a' && s[i] <= 'z')
+				{
+					s[i] = s[i] - 'a' + 'A';
+				}
+			}
+		}
+	}
+
+	return (s);
 }
 
