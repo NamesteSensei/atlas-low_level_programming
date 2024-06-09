@@ -1,14 +1,16 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/* Prints a character */
+int _putchar(char c);
+
 /* Prints a string, followed by a new line */
 void _puts_recursion(char *s);
 
 /* Prints a string in reverse */
-void _print_rev_recrsion(char *s);
+void _print_rev_recursion(char *s);  /* Corrected function name */
 
-/* Returnsa the length of a string
- */
+/* Returns the length of a string */
 int _strlen_recursion(char *s);
 
 /* Returns the value of x raised to the power of y */
@@ -21,3 +23,4 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 
 #endif /* MAIN_H */
+
