@@ -1,12 +1,23 @@
+#include "main.h"
 #include <stdio.h>
-#include "3-factorial.h"
 
-int main() {
-	int number = 5;
-	int result;
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
 
-	result = factorial(number);
-	printf("The factorila of %d is %d\n", number, result);
-
-	return 0;
+    r = factorial(1);
+    printf("%d\n", r);
+    r = factorial(5);
+    printf("%d\n", r);
+    r = factorial(10);
+    printf("%d\n", r);
+    r = factorial(-1024);
+    printf("%d\n", r);
+    return (0);
 }
+
