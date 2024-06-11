@@ -8,17 +8,17 @@
  */
 int factorial(int n)
 {
-    if (n < 0)
-    {
-        return (-1); /* Error for negative numbers */
-    }
-    else if (n == 0)
-    {
-        return (1); /* Base case: 0! = 1 */
-    }
-    else
-    {
-        return (n * factorial(n - 1)); /* Recursive case */
-    }
+	if (n < 0)
+	{
+		return (-1); /* Error for negative numbers */
+	}
+	else if (n == 0)
+	{
+		return (1); /* Base case: 0! = 1 */
+	}
+	else
+	{
+		return (n * factorial(n - 1)); /* Recursive case */
+	}
 }
 
