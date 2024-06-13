@@ -1,0 +1,1 @@
+ life is all about floating and being ready to sting yet not worrying about whenyou must do the stinging. Be Water My frined this is only the start. bask in your greatness and believe in the power of the lord oh yeah by the way THIS ALL about Malloc ;)
