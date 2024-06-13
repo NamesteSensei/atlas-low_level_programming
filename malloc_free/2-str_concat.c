@@ -4,33 +4,45 @@
 /**
  * str_concat - Concatenates two strings.
  * @s1: The first string.
- * @s2: The secound string.
+ * @s2: The second string.
  *
- * Return: if s1 == NULL, s2 == NULL, or the function fails - NULL.
- * otherwise - a pointer to the concatenated space in memory.\
+ * Return: If s1 == NULL, s2 == NULL, or the function fails - NULL.
+ *         Otherwise - a pointer to the concatenated space in memory.
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *concat;
-	int len = 0, index = 0;
+    char *concat;
+    int len1 = 0, len2 = 0, index = 0;
 
-	if (s1 == NULL)
-		s1 = "";
+    if (s1 == NULL)
+        s1 = "";
 
-	while (s1[len])
-		len++;
+    if (s2 == NULL)
+        s2 = "";
 
-	concat = malloc(sizeof(char) * (len + 1));
+    while (s1[len1])
+        len1++;
 
-	if (concat == NULL)
-		return (NULL);
+    while (s2[len2])
+        len2++;
 
-	while (s1[index])
-	{
-		concat[index] = s1[index];
-		index++;
-	}
-	concat[index] = '\0';
+    concat = malloc(sizeof(char) * (len1 + len2 + 1));
 
-	return (concat);
+    if (concat == NULL)
+        return (NULL);
+
+    while (*s1)
+    {
+        concat[index++] = *s1++;
+    }
+
+    while (*s2)
+    {
+        concat[index++] = *s2++;
+    }
+
+    concat[index] = '\0';
+
+    return (concat);
 }
+
