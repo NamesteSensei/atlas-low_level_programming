@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 void *malloc_checked(unsigned int b) {
-	volid *ptr = malloc(b);
+	void *ptr = malloc(b);
 	if (ptr == NULL) {
 		exit(98);
 	}
