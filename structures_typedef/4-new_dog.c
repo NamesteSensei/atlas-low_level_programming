@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "dog.h"
 
 /**
@@ -12,13 +10,19 @@
 char *_strdup(char *str)
 {
     char *dup;
-    size_t len = strlen(str) + 1;
+    int len = 0;
 
-    dup = malloc(len);
+    while (str[len])
+        len++;
+
+    dup = malloc(sizeof(char) * (len + 1));
     if (dup == NULL)
         return NULL;
 
-    return strcpy(dup, str);
+    for (int i = 0; i <= len; i++)
+        dup[i] = str[i];
+
+    return dup;
 }
 
 /**
@@ -33,6 +37,10 @@ char *_strdup(char *str)
 dog_t *new_dog(char *name, float age, char *owner)
 {
     dog_t *new_dog;
+
+    /* Check if any input parameter is NULL */
+    if (name == NULL || owner == NULL)
+        return NULL;
 
     /* Allocate memory for new dog_t structure */
     new_dog = malloc(sizeof(dog_t));
@@ -56,7 +64,7 @@ dog_t *new_dog(char *name, float age, char *owner)
         return NULL;
     }
 
-    /* Assign values to the new dog_t structure */
+    /* Assign age to the new dog_t structure */
     new_dog->age = age;
 
     return new_dog;
