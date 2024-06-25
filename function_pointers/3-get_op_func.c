@@ -1,5 +1,8 @@
 #include "3-calc.h"
 
+/* External declaration of ops array from 3-op_functions.c */
+extern op_t ops[];
+
 /* Function to select the correct operation */
 int (*get_op_func(char *s))(int, int)
 {
