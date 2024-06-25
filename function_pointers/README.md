@@ -1,0 +1,1 @@
+ONeday ata time im getting better, sometimes its loenly here but ill be okay moms in town shes cleaning the apt im so greatful for her love staying focused on school is the right thing to do im proud of you and remember no one is perfect I LOVE YOu
