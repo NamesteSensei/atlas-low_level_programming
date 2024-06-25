@@ -5,7 +5,8 @@
  * print_name_as_is - Prints a name as is.
  * @name: Name of the person.
  *
- * Description: This function prints the given name as is.
+ * Description:
+ * This function prints the given name as is.
  */
 void print_name_as_is(char *name)
 {
@@ -16,7 +17,8 @@ void print_name_as_is(char *name)
  * print_name_uppercase - Prints a name in uppercase.
  * @name: Name of the person.
  *
- * Description: This function prints the given name in uppercase.
+ * Description:
+ * This function prints the given name in uppercase.
  */
 void print_name_uppercase(char *name)
 {
@@ -40,6 +42,10 @@ void print_name_uppercase(char *name)
 
 /**
  * main - Entry point of the program.
+ *
+ * Description:
+ * This function demonstrates the usage of the print_name function with
+ * different printing functions (print_name_as_is and print_name_uppercase).
  *
  * Return: Always 0.
  */
