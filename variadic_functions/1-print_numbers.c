@@ -26,5 +26,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
     /* Clean up the va_list variable */
     va_end(args);
 
-    /* P
+    /* Print a new line */
+    printf("\n");
+}
+
+/* Main function for testing the print_numbers function */
+int main(void)
+{
+    print_numbers(", ", 4, 1, 2, 3, 4);
+    return 0;
+}
 
