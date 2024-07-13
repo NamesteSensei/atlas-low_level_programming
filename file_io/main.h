@@ -32,5 +32,26 @@ ssize_t read_textfile(const char *filename, size_t letters);
  */
 int create_file(const char *filename, char *text_content);
 
+/**
+ * append_text_to_file - Appends text at the end of a file.
+ * @filename: A pointer to the name of the file.
+ * @text_content: A pointer to the NULL-terminated string to add at the end
+ *                of the file.
+ *
+ * Return: If the function fails or filename is NULL - -1.
+ *         If the file does not exist, return -1.
+ *         Otherwise - 1.
+ */
+int append_text_to_file(const char *filename, char *text_content);
+
+/**
+ * copy_file - Copies the content of a file to another file.
+ * @file_from: The source file.
+ * @file_to: The destination file.
+ *
+ * Return: 0 on success, or a positive error code on failure.
+ */
+int copy_file(const char *file_from, const char *file_to);
+
 #endif /* MAIN_H */
 
