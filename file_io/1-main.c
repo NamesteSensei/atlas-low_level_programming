@@ -22,6 +22,10 @@ int main(int ac, char **av)
 	res = create_file(av[1], av[2]);
 	printf("-> %i)\n", res);
 
+	/* Test file creation without permission */
+	res = create_file("no_write_perm", "Should not be written");
+	printf("-> %i)\n", res);
+
 	return (0);
 }
 
