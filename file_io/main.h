@@ -22,5 +22,15 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters);
 
+/**
+ * create_file - Creates a file.
+ * @filename: A pointer to the name of the file to create.
+ * @text_content: A pointer to a NULL-terminated string to write to the file.
+ *
+ * Return: If the function fails - -1.
+ *         Otherwise - 1.
+ */
+int create_file(const char *filename, char *text_content);
+
 #endif /* MAIN_H */
 
