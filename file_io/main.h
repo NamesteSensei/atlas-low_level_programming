@@ -6,7 +6,6 @@
 
 /**
  * File: main.h
- * Auth: Your Name
  * Desc: Header file containing prototypes for all functions
  *       used in the 0x15. C - File I/O project.
  */
